@@ -1,12 +1,8 @@
 # Installing dependencies
 
-The Coq development requires Coq version 8.13.2 and OCaml between 4.05.0 and 4.13.1.
+The Coq development requires Coq version 8.13.2 and OCaml 4.13.1.
 
-You will need the bundled version of the Verimag Polyhedra Library, which you can get with:
-```bash
-git submodule init
-git submodule update --recursive
-```
+We modified the Verimag Polyhedra Library.
 
 Some additional C and OCaml libraries are required, as described below.
 
@@ -14,11 +10,11 @@ We recommend to use either OPAM (the OCaml package manager) or Nix (a Linux pack
 
 ## With OPAM 
 
-Create a new OPAM switch: `opam switch create polygen 4.06.1+flambda`.
+Create a new OPAM switch: `opam switch create polygen 4.13.1`.
 Install GMP, Debian/Ubuntu package libgmp-dev
 Install GLPK, Debian/Ubuntu package libglpk-dev
 Install [eigen](http://eigen.tuxfamily.org/), Debian/Ubuntu package libeigen3-dev.
-Install the following ocaml packages: `opam install zarith glpk menhir coq=8.7.2`.
+Install the following ocaml packages: `opam install zarith glpk menhir coq=8.13.2`.
 
 ## With Nix
 

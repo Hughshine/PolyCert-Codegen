@@ -7,8 +7,8 @@ INCLUDES=$(patsubst %,-I %, $(DIRS))
 PACKAGES=-package zarith
 LIBS=unix.cmxa zarith.cmxa
 
-OCAMLC=ocamlfind ocamlc -unsafe-string $(PACKAGES) $(INCLUDES)
-OCAMLOPT=ocamlfind ocamlopt -unsafe-string $(PACKAGES) $(INCLUDES)
+OCAMLC=ocamlfind ocamlc $(PACKAGES) $(INCLUDES)
+OCAMLOPT=ocamlfind ocamlopt $(PACKAGES) $(INCLUDES)
 OCAMLDEP=ocamldep
 MENHIR=menhir
 OCAMLLEX=ocamllex

@@ -1,5 +1,5 @@
 let (print_channel : out_channel * string -> unit) = function
-	(o,s) -> (output o s 0 (String.length s));;
+	(o,s) -> (output_string o s);;
 
 let str_to_ieq = 
 "def to_ieq(poly, ring, variables):

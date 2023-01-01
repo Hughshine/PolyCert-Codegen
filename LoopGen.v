@@ -30,6 +30,8 @@ Require Import Heuristics.
 
 Require Import Vpl.Impure.
 Require Import ImpureAlarmConfig.
+Require Import String.
+Require Import List.
 
 Open Scope Z_scope.
 Open Scope list_scope.
@@ -117,7 +119,7 @@ Opaque make_lower_bound make_upper_bound.
 
 Fixpoint find_lower_bound_aux (e : option expr) (n : nat) (p : polyhedron) :=
   match p with
-  | nil => match e with Some e => Ok e | None => Err "No lower bound found" end
+  | nil => match e with Some e => Ok e | None => Err "No lower bound found"%string end
   | c :: p => if nth n (fst c) 0 <? 0 then
                find_lower_bound_aux (Some (match e with Some e => make_max e (make_lower_bound n c) | None => make_lower_bound n c end)) n p
              else

@@ -20,6 +20,8 @@ Require Import Vpl.Impure.
 Require Import Vpl.Debugging.
 
 Require Import ImpureAlarmConfig.
+Require Import String.
+Require Import List.
 
 Parameter topo_sort_untrusted : list (list bool) -> imp (list nat).
 
@@ -27,7 +29,7 @@ Definition check_toposort cstr out :=
   if Permutation_dec _ Nat.eq_dec (n_range (length cstr)) out then
     forallb (fun k2 => forallb (fun k1 => negb (nth (nth k2 out 0%nat) (nth (nth k1 out 0%nat) cstr nil) true)) (n_range k2)) (n_range (length cstr))
   else
-    failwith CERT "topo_sort: not permutation" false.
+    failwith CERT "topo_sort: not permutation"%string false.
 
 Lemma check_toposort_correct_permutation :
   forall cstr out, check_toposort cstr out = true -> Permutation (n_range (length cstr)) out.

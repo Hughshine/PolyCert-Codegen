@@ -1,6 +1,6 @@
 # Installing dependencies
 
-The Coq development requires Coq version 8.7.2 and OCaml between 4.05.0 and 4.07.1 and may not work with newer versions of Coq and OCaml.
+The Coq development requires Coq version 8.13.2 and OCaml between 4.05.0 and 4.13.1.
 
 You will need the bundled version of the Verimag Polyhedra Library, which you can get with:
 ```bash

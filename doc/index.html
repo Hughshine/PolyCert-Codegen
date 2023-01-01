@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title>
+            Polyhedral compilation
+        </title>
+        <style type="text/css">
+            body {
+            color: black; background: white;
+            margin-left: 5%; margin-right: 5%;
+            }
+            h2 { margin-left: -5%; }
+            h3 { margin-left: -3%; }
+            h1,h2,h3 { font-family: sans-serif; }
+            hr { margin-left: -5%; margin-right: -5%; }
+            a:visited {color: #416DFF; text-decoration: none; font-weight: bold; }
+            a:link {color: #416DFF; text-decoration: none; font-weight: bold; }
+            a:hover {color: Red; text-decoration: underline; }
+            a:active {color: Red; text-decoration: underline; }
+        </style>
+    </head>
+    <body>
+        <h1 align="center">Polyhedral compilation</h1>
+        <h2>Table of contents</h2>
+        <h3>General-purpose libraries</h3>
+        <ul>
+            <li><a href="html/Misc.html">Misc</a>: Extensions to the Coq standard library.</li>
+            <li><a href="html/Linalg.html">Linalg</a>: Definitions of vectors of integers and operations over them.</li>
+            <li><a href="html/Result.html">Result</a>: The error monad.</li>
+            <li><a href="html/TopoSort.html">TopoSort</a>: Topological sort.</li>
+            <li><a href="html/Mymap.html">Mymap</a>: Workaround for a bug in Coq.</li>
+            <li><a href="html/ImpureOperations.html">ImpureOperations</a>: Definition of operations over a monad (sequence and mapM).</li>
+            <li><a href="html/ImpureAlarmConfig.html">ImpureAlarmConfig</a>: Error monad used throughout the code.</li>
+        </ul>
+        <h3>Polyhedral operations</h3>
+        <ul>
+            <li><a href="html/VplInterface.html">VplInterface</a>: Conversion between our representation of polyhedra and the one used by the VPL.</li>
+            <li><a href="html/Canonizer.html">Canonizer</a>: Simplication of redundant constraints in polyhedra using the VPL.</li>
+            <li><a href="html/Heuristics.html">Heuristics</a>: Heuristics for some polyhedral operations.</li>
+            <li><a href="html/Projection.html">Projection</a>: Computation of polyhedral projections using Fourier-Motzkin elimination.</li>
+            <li><a href="html/PolyTest.html">PolyTest</a>: Operators that test over polyhedra: emptiness, inclusion, precedence (section 5 of the paper).</li>
+            <li><a href="html/PolyOperations.html">PolyOperations</a>: Polyhedra operations: intersection, difference, splitting and sorting (section 5 of the paper), simplifying in a context (section 6 of the paper).</li>
+        </ul>
+        <h3>Languages and semantics</h3>
+        <ul>
+            <li><a href="html/Semantics.html">Semantics</a>: Memory states, semantics for iterating over a list and associated theorems.</li>
+            <li><a href="html/Instr.html">Instr</a>: Semantics of base instructions.</li>
+            <li><a href="html/PolyLang.html">PolyLang</a>: Semantics of the scheduled polyhedral language, and proof of schedule elimination (sections 3 and 4 of the paper).</li>
+            <li><a href="html/PolyLoop.html">PolyLoop</a>: Semantics of the PolyLoop language (section 5 of the paper).</li>
+            <li><a href="html/Loop.html">Loop</a>: Semantics of the Loop language (section 7 of the paper).</li>
+        </ul>
+        <h3>Compilation</h3>
+        <ul>
+            <li><a href="html/ASTGen.html">ASTGen</a>: Code generation from <a href="html/PolyLang.html">PolyLang</a> to <a href="html/PolyLoop.html">PolyLoop</a> (section 5 of the paper).</li>
+            <li><a href="html/PolyLoopSimpl.html">PolyLoopSimpl</a>: Simplification of <a href="html/PolyLoop.html">PolyLoop</a> programs (section 6 of the paper).</li>
+            <li><a href="html/LoopGen.html">LoopGen</a>: Code generation from <a href="html/PolyLoop.html">PolyLoop</a> to <a href="html/Loop.html">Loop</a> (section 7 of the paper).</li>
+            <li><a href="html/CodeGen.html">CodeGen</a>: Proof of the main result by composing all passes.</li>
+        </ul>
+    </body>
+</html>
